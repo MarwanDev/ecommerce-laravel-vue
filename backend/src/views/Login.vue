@@ -1,5 +1,4 @@
-<script>
-</script>
+
 
 <template>
   <GuestLayout title="Sign in to your account">
@@ -94,7 +93,11 @@
     </form>
   </GuestLayout>
 </template>
-  
+
+<script setup>
+import {LockClosedIcon} from '@heroicons/vue/solid'
+import GuestLayout from "../components/GuestLayout.vue";
+</script>
 
 <style>
 </style>
