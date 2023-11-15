@@ -1,8 +1,8 @@
-<script setup>
+<script>
 </script>
 
 <template>
-  <router-view></router-view>
+  <h1>Login form</h1>
 </template>
 
 <style>
