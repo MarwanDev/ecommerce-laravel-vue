@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Dashboard from "../views/Dashboard.vue";
 import Login from "../views/Login.vue";
+import ResetPassword from "../views/ResetPassword.vue";
+import RequestPassword from "../views/RequestPassword.vue";
 
 const routes = [
     {
@@ -11,8 +13,27 @@ const routes = [
     {
         path: '/login',
         name: 'login',
-        component: Login
-    },
+        component: Login,
+        meta: {
+          requiresGuest: true
+        }
+      },
+      {
+        path: '/request-password',
+        name: 'requestPassword',
+        component: RequestPassword,
+        meta: {
+          requiresGuest: true
+        }
+      },
+      {
+        path: '/reset-password/:token',
+        name: 'resetPassword',
+        component: ResetPassword,
+        meta: {
+          requiresGuest: true
+        }
+      },
 ];
 
 const router = createRouter({
